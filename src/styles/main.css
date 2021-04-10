@@ -1,0 +1,367 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+    z-index: 1;
+}
+html {
+    font-size: 1rem;
+}
+@media (min-width: 1200px) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+.main-page {
+    position: absolute;
+    top:0; left: 0; right: 0; bottom: 0;
+}
+.main-console-font {
+    font-family: Consolas, "Lucida Console", "Courier New";
+}
+.main-discord-font {
+    font-family: Whitney, "Helvetica Neue", Helvetica;
+}
+.main-bg-bsod {
+    background-color: #0000aa;
+    color: #b3b3b3;
+    font-weight: bold;
+}
+.main-title-bsod {
+    background-color: #b3b3b3;
+    color: #0000aa;
+    white-space: pre;
+}
+.main-card {
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    border: 0px;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.card-img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+    justify-content: center;
+}
+.main-bg-card-1 {
+    background: #3c1053;
+    color: white;
+}
+#main-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    height: 15%;
+    min-width: 200px;
+    padding: 0.75em 0.75em;
+    margin: 2rem;
+    z-index: 100;
+}
+.main-navbar-spacer {
+    min-height: 150px;
+    height: 20vh;
+}
+.main-navbar-logo {
+    max-height: 2em;
+    width: auto;
+    font-family: Roboto, Arial;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .main-navbar-mobile-fix {
+        width: 0;
+    }
+}
+.main-footer {
+    background-color: #000000;
+    color: #ffffff;
+    display: absolute;
+}
+.main-scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.main-scrolled-down{
+    transform:translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+.main-scrolled-up{
+    transform:translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+.main-circle {
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    margin-bottom: 1em;
+    background: purple;
+}
+.main-mw-300px {
+    max-width: 300px;
+}
+.main-cyberpatriot {
+    font-family: "Nike Bureau";
+    text-transform: uppercase;
+}
+.main-d214 {
+    max-width: 250px;
+}
+.main-mc-characters {
+    max-height: 300px;
+}
+.main-center {
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+.main-button {
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    background-color: #aaaaaa;
+    transition: all 0.5s;
+}
+.main-button:hover {
+    transform: scale(1.2);
+}
+.main-btn-purple {
+    color: #ffffff;
+    background-color: #be00fe;
+    border-color: #be00fe;
+}
+.main-btn-purple:hover {
+    color: #ffffff;
+    background-color: #34034a;
+    border-color: #34034a;
+}
+.main-bg-blue-gradient {
+    background: linear-gradient(135deg, #00dfff, #00aaff, #0080ff);
+}
+.main-bg-cyber {
+    background: linear-gradient(rgba(52, 3, 74, 0.8), rgba(52, 3, 74, .8)), url("../img/semifinals_2020_1.jpg") no-repeat top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.main-bg-black {
+    background: #000000;
+}
+.main-text-orange {
+    color: #fa6122;
+    font-weight: 500;
+}
+.main-text-green {
+    color: #28b463;
+    font-weight: 500;
+}
+.main-text-blue-gradient {
+    background-color: #00aaff;
+    background-image: linear-gradient(to right, #00dfff, #00aaff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.main-timeline {
+    max-width: 30rem;
+    margin: auto;
+}
+.main-timeline-entry {
+    border-left: 3px solid #ffffff;
+    margin: 0;
+    padding: 20px;
+    padding-right: 0;
+}
+.main-timeline-year {
+    border: 3px solid #ffffff;
+    margin: 0;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+}
+.main-timeline-present {
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px dashed #ffffff;
+    padding: 10px 20px 5px 20px;
+    display: inline-block;
+}
+.main-timeline-entry strong {
+    background-color: #00aaff;
+    background-image: linear-gradient(to right, #00dfff, #00aaff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+/* CSS animations for page transitions on the site */
+/* Documentation: http://reactcommunity.org/react-transition-group/css-transition */
+.main-ripple-transition-enter {
+    clip-path: circle(0%);
+    position: fixed;
+    z-index: 99;
+}
+.main-ripple-transition-enter.main-ripple-transition-enter-active {
+    clip-path: circle(125%);
+    position: fixed;
+    transition: all 1s ease-out;
+}
+.main-fade-in-animation {
+    -webkit-animation: fadeIn 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) 0s both;
+    animation: fadeIn 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) 0s both;
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.main-fade-in-3d-animation {
+    -webkit-animation: fadeIn3d 1s ease-out 0s both;
+    animation: fadeIn3d 1s ease-out 0s both;
+}
+@-webkit-keyframes fadeIn3d {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0;
+        box-shadow: 2em 2em 1em rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    }
+}
+@keyframes fadeIn3d {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0;
+        box-shadow: 2em 2em 1em rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    }
+}
+.main-fade-in-up-animation {
+    -webkit-animation: fadeInUp 1s ease 0s both;
+    animation: fadeInUp 1s ease 0s both;
+}
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 32px, 0);
+        transform: translate3d(0, 32px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 32px, 0);
+        transform: translate3d(0, 32px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+.main-fade-in-left-animation {
+    -webkit-animation: fadeInLeft 1s ease 0s both;
+    animation: fadeInLeft 1s ease 0s both;
+}
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(32px, 0, 0);
+        transform: translate3d(32px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(32px, 0, 0);
+        transform: translate3d(32px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Overrides bootstrap CSS */
+.nav-link {
+    font-family: Roboto, Arial;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.icon-bar {
+	width: 22px; 
+	height: 2px;
+	background-color: #b6b6b6;
+	display: block;
+	transition: all 0.2s;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
+}
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar {
+    opacity: 0;
+}
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+/* Change null to * for debugging */
+null {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
