@@ -1,7 +1,9 @@
-import $ from "jquery";
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
+
+// Yes, I know, I'm a fucking retard for using jquery with ReactJS, but I was desperate at the time and it works so
+import $ from "jquery";
 
 import logo from "../img/101sec.png";
 
